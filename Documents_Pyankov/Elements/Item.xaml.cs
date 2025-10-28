@@ -36,12 +36,12 @@ namespace Documents_Pyankov.Elements
                 }
                 else
                 {
-                    img.Source = new BitmapImage(new Uri("pack://application:,,,/images/icon-black.png"));
+                    img.Source = new BitmapImage(new Uri("pack://application:,,,/image/icon-black.png"));
                 }
             }
             catch
             {
-                img.Source = new BitmapImage(new Uri("pack://application:,,,/images/icon-black.png"));
+                img.Source = new BitmapImage(new Uri("pack://application:,,,/image/icon-black.png"));
             }
 
             lName.Content = documentContext.Name;
