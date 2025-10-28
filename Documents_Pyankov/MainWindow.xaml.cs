@@ -1,6 +1,8 @@
-﻿using System;
+﻿using Documents_Pyankov.Classes;
+using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -20,9 +22,15 @@ namespace Documents_Pyankov
     /// </summary>
     public partial class MainWindow : Window
     {
+        public static MainWindow init;
+        public List<DocumentContext> AllDocuments = new DocumentContext().AllDocuments();
         public MainWindow()
         {
             InitializeComponent();
+
+            init = this;
+
+            frame.Navigate(new Pages.Main());
         }
     }
 }
